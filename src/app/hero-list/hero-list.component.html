@@ -1,0 +1,13 @@
+<div style="text-align: center">
+  <h1>Hero List</h1>
+
+  <input type="text" [(ngModel)]="newHero" placeholder="Add a new hero" />
+  <button (click)="addHero()">Add Hero</button>
+
+  <ul>
+    <li *ngFor="let hero of heroes">
+      {{ hero }}
+      <button (click)="deleteHero(hero)">Delete</button>
+    </li>
+  </ul>
+</div>
